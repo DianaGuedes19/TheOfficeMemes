@@ -11,6 +11,9 @@ public class memesDTO {
         this.url = url;
     }
 
+    public memesDTO() {
+    }
+
     // Getters and Servers
     public Long getId() {
         return id;

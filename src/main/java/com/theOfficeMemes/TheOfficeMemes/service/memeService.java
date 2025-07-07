@@ -1,13 +1,11 @@
 package com.theOfficeMemes.TheOfficeMemes.service;
 
-import com.theOfficeMemes.TheOfficeMemes.domain.Memes;
+import com.theOfficeMemes.TheOfficeMemes.DTO.memesDTO;
 import com.theOfficeMemes.TheOfficeMemes.repository.memesRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-
 @Service
-public class memeService {
+public class memeService implements ImemeService {
 
     private final memesRepository memesRepository;
 
@@ -15,5 +13,10 @@ public class memeService {
         this.memesRepository = memesRepository;
     }
 
+    /*
+    public memesDTO createMeme (memesDTO memesDTO){
 
+    }
+
+     */
 }

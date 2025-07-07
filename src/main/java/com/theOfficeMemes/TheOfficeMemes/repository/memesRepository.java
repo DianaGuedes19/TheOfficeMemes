@@ -1,8 +1,8 @@
 package com.theOfficeMemes.TheOfficeMemes.repository;
 
-import com.theOfficeMemes.TheOfficeMemes.domain.Memes;
+import com.theOfficeMemes.TheOfficeMemes.domain.memes;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-public interface memesRepository extends JpaRepository<Memes,Long> {
+public interface memesRepository extends JpaRepository<memes,Long> {
 }

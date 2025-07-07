@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Memes {
+public class memes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +14,7 @@ public class Memes {
     private String url;
 
     // Constructor
-    public Memes(Long id, String url) {
+    public memes(Long id, String url) {
         if (url == null || url.isBlank() || url.isEmpty()){
             throw new IllegalArgumentException("URL cannot be null or Empty");
         }
@@ -23,7 +23,7 @@ public class Memes {
     }
 
     // Empty Constructor
-    public Memes() {
+    public memes() {
     }
 
     // Getters
@@ -33,5 +33,14 @@ public class Memes {
 
     public String getUrl() {
         return url;
+    }
+
+    // Setters
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
