@@ -10,11 +10,11 @@ public class Memes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String url;
 
     // Constructor
-    public Memes(int id, String url) {
+    public Memes(Long id, String url) {
         if (url == null || url.isBlank() || url.isEmpty()){
             throw new IllegalArgumentException("URL cannot be null or Empty");
         }
@@ -27,7 +27,7 @@ public class Memes {
     }
 
     // Getters
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
