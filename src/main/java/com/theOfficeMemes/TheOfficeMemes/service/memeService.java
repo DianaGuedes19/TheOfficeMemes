@@ -40,12 +40,12 @@ public class memeService implements ImemeService {
         return memes.stream().map(memesMapper::mapToDTO).collect(Collectors.toList());
     }
 
-//    public String deleteMeme(Long id){
-//        memes memes1 = memesRepository.findById(id).orElseThrow(() -> new RuntimeException("The office Meme not found"));
-//
-//        memesRepository.delete(memes1);
-//
-//        return "Meme deleted with sucess";
-//    }
+    public String deleteMeme(Long id){
+        memes memes1 = memesRepository.findById(id).orElseThrow(() -> new RuntimeException("The office Meme not found"));
+
+        memesRepository.delete(memes1);
+
+        return "Meme deleted with sucess";
+    }
 
 }

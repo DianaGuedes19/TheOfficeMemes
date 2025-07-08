@@ -40,7 +40,7 @@ class memeServiceTest {
 
         memes toSave = new memes();
 
-        memes saved = new memes(toSave.getId(),toSave.getUrl());
+        memes saved = new memes(inDto.getId(),inDto.getUrl());
 
         when(memesRepository.save(toSave)).thenReturn(saved);
 
@@ -94,7 +94,21 @@ class memeServiceTest {
         assertEquals(2L, all.get(1).getId());
     }
 
-//    @Test
-//    void deleteMeme() {
-//    }
+    @Test
+    void deleteMeme() {
+
+        // Arrange
+        Long id = 5L;
+        memes toDelete = new memes();
+        toDelete.setId(id);
+        toDelete.setUrl("any-url");
+        when(memesRepository.findById(id))
+                .thenReturn(Optional.of(toDelete));
+
+        // Act
+        String msg = memesService.deleteMeme(id);
+
+        // Assert
+        assertEquals("Meme deleted with sucess", msg);
+    }
 }
